@@ -7,7 +7,6 @@
         <h4 class="k-product-item__title">{{ item.title }}</h4>
       </li>
     </ul>
-    <button @click="addItem">Add Item</button>
   </div>
 </template>
 
@@ -24,9 +23,6 @@ export default {
     }
   },
   methods: {
-    addItem() {
-      this.items.push({ title: `Product ${this.items.length + 1}`, imageUrl: 'https://via.placeholder.com/400' })
-    },
     select(item) {
       const event = new CustomEvent('itemSelected', { detail: item });
       document.dispatchEvent(event)

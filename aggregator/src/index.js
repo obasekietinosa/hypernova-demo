@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/', async (req, res) => {
   const promises = [getContent(), getLayout()]
-  const [content, { header }] = await Promise.all(promises)
+  const [content, header ] = await Promise.all(promises)
   const html = `
     <!DOCTYPE html>
     <html lang="en">
@@ -17,7 +17,7 @@ app.get('/', async (req, res) => {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Document</title>
+      <title>My Microfrontend Shop</title>
       <link rel="stylesheet" href="/style.css">
     </head>
     <body>

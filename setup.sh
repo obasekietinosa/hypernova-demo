@@ -1,9 +1,9 @@
 #!/bin/bash
 
 install_deps() {
-    (cd hypernova-server-vue && yarn)
-    (cd hypernova-server-react && yarn)
-    (cd hypernova-aggregator && yarn)
+    (cd product-list && yarn)
+    (cd cart && yarn)
+    (cd aggregator && yarn)
 }
 
 install_deps

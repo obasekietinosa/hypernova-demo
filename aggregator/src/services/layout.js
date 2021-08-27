@@ -6,21 +6,17 @@ module.exports.getLayout = () => {
     header: {
       name: 'Header',
       data: {
-        title: 'Wizeline',
+        title: 'My Store',
         links: [
           {
-            url: 'https://www.wizeline.com/',
+            url: '/',
             text: 'Home'
           },
-          {
-            url: 'https://github.com/airbnb/hypernova',
-            text: 'Hypernova'
-          }
         ]
       }
     }
   })
     .then(({ data }) => {
-      return data.results
+      return data.results.header
     })
 }

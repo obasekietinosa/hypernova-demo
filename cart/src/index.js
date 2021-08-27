@@ -15,7 +15,6 @@ hypernova({
     return null;
   },
   port: process.env.PORT || 3031,
-
   createApplication() {
     const app = express();
 
